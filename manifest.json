@@ -1,0 +1,19 @@
+{
+  "name": "ExtraPulp",
+  "description": "Extra pulp!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["https://play.date/pulp/*/edit/", "https://play.date/pulp/*/play/"],
+      "js": ["extrapulp_content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["extrapulp_inject.js"],
+      "matches": ["https://play.date/*"]
+    }
+  ]
+}
